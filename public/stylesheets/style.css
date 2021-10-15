@@ -5,6 +5,7 @@ body {
 
 a {
   color: #00b7ff;
+  display: inline-block;
 }
 
 .drone_list-container {
@@ -13,35 +14,36 @@ a {
   flex-wrap: wrap;
 }
 
-.drone-card{
+.drone-card {
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 8px;
-  min-height: 100px;
+  min-height: 200px;
   width: 20%;
 }
 
-.form-container{
+.form-container {
   display: flex;
   width: 100%;
   justify-content: center;
 }
-.form{
+
+.form {
   width: 50%;
 }
 
-.input{
+.input {
   display: inline-block;
   width: 100%;
   min-height: 30px;
   margin: 8px auto 24px;
 }
 
-.label{
+.label {
   display: block;
 }
 
-.submit{
+.submit {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,8 +56,26 @@ a {
   cursor: pointer;
 }
 
-.submit:hover{
+.submit:hover {
   background-color: rgb(70, 70, 224);
   color: #fff;
   border: 1px solid rgb(70, 70, 224);
+}
+
+.delete,
+.details {
+  background-color: rgb(222, 38, 38);
+  padding: 8px;
+  min-height: 30px;
+  border-radius: 8px;
+  color: #fff;
+  text-decoration: none;
+  margin: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.details{
+  background-color: rgb(67, 125, 207);
 }

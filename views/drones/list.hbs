@@ -1,13 +1,18 @@
 <h2>Available drones</h2>
 
+{{#unless dronesList.length}}
+  <h2>No drones yet</h2>
+{{/unless}}
+
 <div class="drone_list-container">
   {{#each dronesList}}
     <div class="drone-card">
-        <h2>Name: {{name}}</h2>
-        <h3>Number of propellers: {{propellers}}</h3>
-        <h3>Max speed: {{maxSpeed}}</h3>
+      <h2>{{name}}</h2>
+      <h3>Number of propellers: {{propellers}}</h3>
+      <h3>Max speed: {{maxSpeed}}</h3>
 
-        <a href="drones/details">Learn more</a>
+      <a class="details" href="drones/{{_id}}">Learn more</a>
+      <a class="delete" href="drones/delete/{{_id}}">Delete drone</a>
     </div>
   {{/each}}
 </div>
