@@ -41,9 +41,17 @@ router.get("/drones/:id", async (req, res, next) => {
   });
 });
 
-router.get("/drones/:id/edit", (req, res, next) => {
-  // Iteration #4: Update the drone
-  // ... your code here
+router.get("/drones/edit/:id", async (req, res, next) => {
+  let foundDrone
+  try {
+    foundDrone = await DroneModel.findById(req.params.id);
+  } catch (err) {
+    console.log(err, "Drone not found");
+  }
+
+  res.render("drones/update-form.hbs", {
+    foundDrone,
+  });
 });
 
 router.post("/drones/:id/edit", (req, res, next) => {

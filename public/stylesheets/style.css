@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   padding: 50px;
   font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
@@ -63,7 +67,8 @@ a {
 }
 
 .delete,
-.details {
+.details,
+.update {
   background-color: rgb(222, 38, 38);
   padding: 8px;
   min-height: 30px;
@@ -76,6 +81,24 @@ a {
   align-items: center;
 }
 
-.details{
+.delete:hover{
+  background-color: rgb(255, 0, 0);
+}
+
+.details {
   background-color: rgb(67, 125, 207);
+}
+.details:hover{
+  background-color: rgb(2, 75, 179);
+}
+
+.update {
+  background-color: white;
+  color: rgb(67, 125, 207);
+  border: 1px solid rgb(67, 125, 207);
+}
+
+.update:hover{
+  background-color: rgb(67, 125, 207);
+  color: #fff;
 }
