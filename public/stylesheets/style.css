@@ -12,6 +12,40 @@ a {
   display: inline-block;
 }
 
+.nav{
+  width: 80%;
+  margin: 0 auto;
+  height: 40px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 1000px;
+}
+
+.nav a{
+  text-decoration: none;
+  color: #444;
+  text-transform: uppercase;
+}
+
+.nav a:hover{
+  color: #111;
+  text-decoration: underline;
+}
+
+
+.list-page-hero {
+  position: fixed;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  opacity: .6;
+}
+
 .drone_list-container {
   display: flex;
   gap: 8px;
@@ -20,10 +54,30 @@ a {
 
 .drone-card {
   border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 8px;
-  min-height: 200px;
-  width: 20%;
+  background-color: white;
+  border-radius: 16px;
+  padding: 16px;
+  min-height: 300px;
+  width: 25%;
+}
+
+.img-card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+
+.hero-img {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  opacity: 0.6;
+  top: 0;
+  left: 0;
 }
 
 .form-container {
@@ -55,7 +109,7 @@ a {
   min-width: 100px;
   background-color: #fff;
   border: 1px solid #444;
-  border-radius: 8px;
+  border-radius: 100px;
   padding: 10px;
   cursor: pointer;
 }
@@ -72,7 +126,7 @@ a {
   background-color: rgb(222, 38, 38);
   padding: 8px;
   min-height: 30px;
-  border-radius: 8px;
+  border-radius: 100px;
   color: #fff;
   text-decoration: none;
   margin: 4px;
@@ -81,14 +135,15 @@ a {
   align-items: center;
 }
 
-.delete:hover{
+.delete:hover {
   background-color: rgb(255, 0, 0);
 }
 
 .details {
   background-color: rgb(67, 125, 207);
 }
-.details:hover{
+
+.details:hover {
   background-color: rgb(2, 75, 179);
 }
 
@@ -98,7 +153,7 @@ a {
   border: 1px solid rgb(67, 125, 207);
 }
 
-.update:hover{
+.update:hover {
   background-color: rgb(67, 125, 207);
   color: #fff;
 }

@@ -1,19 +1,31 @@
-<h2>Available drones</h2>
+<div class="drone-list-page">
 
-{{#unless dronesList.length}}
-  <h2>No drones yet</h2>
-{{/unless}}
+  <img class="list-page-hero"
+    src="https://images.unsplash.com/photo-1507724571015-2a7d95884528?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+    alt=""
+  />
+  <h2>Available drones</h2>
 
-<div class="drone_list-container">
-  {{#each dronesList}}
-    <div class="drone-card">
-      <h2>{{name}}</h2>
-      <h3>Number of propellers: {{propellers}}</h3>
-      <h3>Max speed: {{maxSpeed}}</h3>
+  {{#unless dronesList.length}}
+    <h2>No drones yet</h2>
+  {{/unless}}
 
-      <a class="details" href="drones/{{_id}}">Learn more</a>
-      <a class="update" href="drones/edit/{{_id}}">Update</a>
-      <a class="delete" href="drones/delete/{{_id}}">Delete drone</a>
-    </div>
-  {{/each}}
+  <div class="drone_list-container">
+    {{#each dronesList}}
+      <div class="drone-card">
+
+        <div class="img-card">
+          <img class="img-card-image" src="{{image}}" alt="">
+        </div>
+
+        <h2>{{name}}</h2>
+        <h3>Number of propellers: <br> {{propellers}}</h3>
+        <h3>Max speed: <br> {{maxSpeed}} km/h</h3>
+
+        <a class="details" href="drones/{{_id}}">Learn more</a>
+        <a class="update" href="drones/edit/{{_id}}">Update</a>
+        <a class="delete" href="drones/delete/{{_id}}">Delete drone</a>
+      </div>
+    {{/each}}
+  </div>
 </div>

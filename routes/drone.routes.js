@@ -42,7 +42,7 @@ router.get("/drones/:id", async (req, res, next) => {
 });
 
 router.get("/drones/edit/:id", async (req, res, next) => {
-  let foundDrone
+  let foundDrone;
   try {
     foundDrone = await DroneModel.findById(req.params.id);
   } catch (err) {
@@ -54,9 +54,16 @@ router.get("/drones/edit/:id", async (req, res, next) => {
   });
 });
 
-router.post("/drones/:id/edit", (req, res, next) => {
-  // Iteration #4: Update the drone
-  // ... your code here
+router.post("/drones/edit/:id", async (req, res, next) => {
+  try {
+    await DroneModel.findByIdAndUpdate(req.params.id, {
+      ...req.body,
+    });
+
+    res.redirect("/drones");
+  } catch (err) {
+    console.log(err, "This drone couldn't have been updated");
+  }
 });
 
 router.get("/drones/delete/:id", async (req, res, next) => {
